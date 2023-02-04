@@ -18,13 +18,10 @@ class Team
   end
   
   # 表示
-  def show_team_result(year)
-    puts "#{self.name} の#{year}年の成績は #{self.win}勝 #{self.lose}敗 #{self.draw}分、勝率は #{self.calc_win_rate}です。"
+  def show_team_result()
+    puts "#{self.name} の2020年の成績は #{self.win}勝 #{self.lose}敗 #{self.draw}分、勝率は #{self.calc_win_rate}です。"
   end
 end
-
-# 年設定
-t_year = 2020
 
 # チーム
 s_team = [
@@ -40,5 +37,5 @@ s_team.each do |o_tm|
   # チームの初期化
   t = Team.new(o_tm[:name], o_tm[:win], o_tm[:lose], o_tm[:draw])
   # 出力
-  t.show_team_result(t_year)
+  t.show_team_result()
 end
